@@ -2,9 +2,10 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<title>Dale's Testimonials</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=yes">
+<title>Spring Mill Inn Testimonials</title>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,700|Open+Sans">
+<link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Sorts+Mill+Goudy" />
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
@@ -12,17 +13,20 @@
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
 <style>
 body {
-	font-family: "Open Sans", sans-serif;
+	font-family: "Sorts Mill Goudy", serif;
 }
 h2 {
 	color: #333;
 	text-align: center;
 	text-transform: uppercase;
-	font-family: "Roboto", sans-serif;
+	font-family: "Sorts Mill Goudy", serif;
 	font-weight: bold;
 	position: relative;
 	margin: 30px 0 60px;
 }
+
+/* Green accent line under "Testamonials" */
+
 h2::after {
 	content: "";
 	width: 100px;
@@ -32,22 +36,28 @@ h2::after {
 	background: #8fbc54;
 	left: 0;
 	right: 0;
-	bottom: -10px;
+    bottom: -10px;
 }
 .col-center {
 	margin: 0 auto;
 	float: none !important;
 }
+
+/* controls the positioning of back and forward buttons that look like this <> */
+
 .carousel {
 	padding: 0 70px;
 }
 .carousel .carousel-item {
 	color: #999;
-	font-size: 14px;
+	font-size: 18px;
 	text-align: center;
 	overflow: hidden;
 	min-height: 290px;
 }
+
+/* controls photo above each testimonial */
+
 .carousel .carousel-item .img-box {
 	width: 135px;
 	height: 135px;
@@ -56,22 +66,34 @@ h2::after {
 	border: 1px solid #ddd;
 	border-radius: 50%;
 }
+
+/* turns photo into a circle */
+
 .carousel .img-box img {
 	width: 100%;
 	height: 100%;
 	display: block;
 	border-radius: 50%;
 }
+
+/* positions and styles testimonial text */
+
 .carousel .testimonial {
 	padding: 30px 0 10px;
 }
 .carousel .overview {	
 	font-style: italic;
 }
+
+/* styles testamonial persons name and address  */
+
 .carousel .overview b {
 	text-transform: uppercase;
 	color: #7AA641;
 }
+
+/* postions and styles previous and next controls that look like this <> */
+
 .carousel-control-prev, .carousel-control-next {
 	width: 40px;
 	height: 40px;
@@ -87,6 +109,9 @@ h2::after {
 	color: rgba(0, 0, 0, 0.8);
 	text-shadow: 0 3px 3px #e6e6e6, 0 0 0 #000;
 }
+
+/* postions and styles indicatiors that look like dots */
+
 .carousel-indicators {
 	bottom: -40px;
 }
@@ -112,7 +137,7 @@ h2::after {
 <div class="container-xl">
 	<div class="row">
 		<div class="col-lg-8 mx-auto">
-			<h2>Testimonials</h2>
+			<h2>Testamonials</h2>
 			<div id="myCarousel" class="carousel slide" data-ride="carousel">
 				<!-- Carousel indicators -->
 				<ol class="carousel-indicators">
@@ -125,23 +150,23 @@ h2::after {
 				<div class="carousel-inner">
 					<div class="carousel-item active">
 						<div class="img-box"><img src="images/larry.jpg" alt=""></div>
-                      <p class="testimonial">Thanks for <strong>your hard work and leadership</strong> on the Horizon software upgrade. You <strong>demonstrated a true sense of ownership</strong> throughout the event <strong>and a commitment to our co-workers</strong>. </p>
-						<p class="overview"><b>Informations Systems Director</b>, Clark Memorial Hospital</p>
+                      <p class="testimonial">We were very pleased with the staff and all there is to do at Spring Mill Park! Delightful location, lots of trails for walking, excellent staff, nice room and a great restaurant. If you are looking for a family friendly break from the daily grind - this is a good choice.</p>
+						<p class="overview"><b>Benjamin</b> - Bowling Green, Ohio</p>
 					</div>
 					<div class="carousel-item">
 						<div class="img-box"><img src="images/christina.jpg" alt=""></div>
-						<p class="testimonial">I really appreciate all you do for us to make sure we are up and running smoothly! You are <strong>always very courteous and very knowledgeable</strong>!</p>
-						<p class="overview"><b>Account Specialist</b>, Clark Physician Group, LLC</p>
+						<p class="testimonial">I really enjoyed this park. The inn is very nice, great service from the front desk. The hiking was great. The trails are fun and most are easy enough for a part time hiker like me. There’s an indoor pool at the inn along with a few arcade type games. Really nice!</p>
+						<p class="overview"><b>Jeanne</b> - Page, Arizona</p>
 					</div>
 					<div class="carousel-item">
 						<div class="img-box"><img src="images/bert.jpg" alt=""></div>
-						<p class="testimonial">...thank you for all of your <strong>hard work and dedication</strong> to doing what is <strong>right and ethical</strong>. You are very <strong>much appreciated</strong>. So glad you are working on all the <strong>IT infrastructure</strong>.</p>
-						<p class="overview"><b>Executive Vice President/CEO</b>, Greater Louisville Medical Society</p>
+						<p class="testimonial">Stayed here for a couple days of relaxation. Got a two queen bed room with fridge and microwave. Nice spacious room. Clean and comfortable. The dining room had AWESOME fried chicken. The staff was very friendly. They keep the building up very nicely!</p>
+						<p class="overview"><b>Doug</b> - Salem, Indiana</p>
 					</div>
                     <div class="carousel-item">
 						<div class="img-box"><img src="images/thought.jpg" alt=""></div>
-						<p class="testimonial">We’ve been pretty demanding, but you <strong>always helped us with a smiling face and extra positive attitude<strong>.  I am very thankful that you were here for us to resolve any issues we had related to IT.</p>
-						<p class="overview"><b>PM Implementation Consultant</b>, Allscripts</p>
+						<p class="testimonial">Wonderful staff, beautiful location and dining hall on site. Entrance fee also gives you access to Pioneer Village and the Gus Grissom Museum. Has a delicious breakfast and dinner buffet. Loved the trails, pool, game area, reading nook. Highly recommend.</p>
+						<p class="overview"><b>Mary</b> - Indianapoils, Indiana</p>
 					</div>
 				</div>
 				<!-- Carousel controls -->
