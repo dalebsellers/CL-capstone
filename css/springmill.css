@@ -1,0 +1,170 @@
+
+/* Sets body font properties */
+body {
+    font-family: sans-serif;
+    font-size: 13px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-weight: 800;
+}
+
+/* Sets navigation background to white with right and left side padding of 15px  */
+nav {
+    background: white;
+    padding: 0 15px;
+}
+
+/* sets link colors and removes default underline for links */
+a {
+    color: #4a4949;
+    text-decoration: none;
+}
+
+/* sets logo padding and font properties */
+.logo {
+    /* font-size: 20px; */
+    padding: 7.5px 10px 7.5px 0;
+}
+
+/* sets padding between main nav items */
+.item {
+    padding: 10px;
+}
+
+/* .item.button {
+    padding: 9px 5px;
+} */
+
+/* sets hover color for main nav items */
+.item:not(.button) a:hover,
+.item a:hover::after {
+    color: #9f9080;
+}
+
+/* changes main nav items from column to row orientation */
+.menu {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* sets padding to make nav items easy to select */
+.menu li a {
+    display: block;
+    padding: 15px 5px;
+}
+
+/* sets main nav submenu indentation */
+.menu li.subitem a {
+    padding: 15px;
+}
+
+/* sets hamburger icon size and order - to ensure it is placed on the right hand side of page   */
+.toggle {
+    order: 1;
+    font-size: 20px;
+}
+
+/* .item.button {
+    order: 2;
+} */
+
+/* sets (hides) main nav items in default (mobile view) */
+.item {
+    order: 3;
+    width: 100%;
+    text-align: right;
+    display: none;
+}
+
+/* sets main nav items to be displayed in a column orientation after clicking on hamburger icon */
+.active .item {
+    display: block;
+}
+
+/* ================= submenu styling ================= */
+
+/* sets (hides) "More" submenu in default (mobile view)  */
+.submenu {
+    display: none;
+}
+
+/* sets (reveals) "More" submenu after clicking on "More" link in default (mobile view)  */
+.submenu-active .submenu {
+    display: block;
+ }
+
+/* sets hover properties for submenu - shifts the word "More" to the left and adds "v" graphic */
+.has-submenu > a::after {
+    font-family: "Font Awesome 5 Free";
+    font-size: 12px;
+    line-height: 16px;
+    font-weight: 900; 
+    content: "\f078";
+    color: white;
+    padding-left: 5px;
+}
+
+/* .subitem a {
+    padding: 10px 15px;
+} */
+
+/* sets background properties for submenu wile active */
+.submenu-active {
+    background-color:#f8f8f8;
+    border-radius: 30px;
+}
+
+/* ======== Marvelous Media Queries ========= */
+/* Tablet menu */
+@media all and (min-width: 700px) {
+
+    /* Make two column with here?     */
+    
+}
+/* Desktop menu */
+@media all and (min-width: 1000px) {
+
+/* Make three column with here?     */
+
+.menu {
+    align-items: flex-start;     
+    flex-wrap: nowrap;
+    background: none;
+}
+
+.logo {
+    order: 0;
+}
+
+/* sets main nav items to be displayed in a row orientation */
+.item {
+    order: 1;
+    position: relative;
+    display: block; 
+    width: auto;
+}
+
+/* .button {
+    order: -2;
+} */
+
+/* .submenu-active .submenu {
+    display: block;
+    position: relative;
+    left: 0px;
+    top: 5px;
+    background: #f8f8f8;
+} */
+
+/* sets hamburger icon to disappear */
+.toggle {
+    display: none;
+}
+
+/* .submenu-active {
+    border-radius: 0;
+} */
+
+}

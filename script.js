@@ -1,4 +1,4 @@
-/* 5. Add the Toggle Functionality with JavaScript */
+/* sets the toggle functionality with JavaScript */
     
 const toggle = document.querySelector(".toggle");
 const menu = document.querySelector(".menu");
