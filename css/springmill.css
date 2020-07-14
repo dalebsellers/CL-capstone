@@ -110,21 +110,30 @@ a {
     padding: 10px 15px;
 } */
 
-/* sets background properties for submenu wile active */
+/* sets background properties for submenu while active */
 .submenu-active {
     background-color:#f8f8f8;
     border-radius: 30px;
 }
 
+video {
+    object-fit: cover;
+    width: 100%;
+    height: 50vh;
+    /* position: fixed;
+    top: 0px;
+    left: 0; */
+  }
+
 /* ======== Marvelous Media Queries ========= */
 /* Tablet menu */
-@media all and (min-width: 700px) {
+/* @media all and (min-width: 700px) { */
 
     /* Make two column with here?     */
     
-}
+/* } */
 /* Desktop menu */
-@media all and (min-width: 1000px) {
+@media all and (min-width: 980px) {
 
 /* Make three column with here?     */
 
