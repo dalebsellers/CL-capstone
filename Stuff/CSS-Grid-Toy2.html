@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>CSS Grid Toy2</title>
+	  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">    
+	  <link href="https://fonts.googleapis.com/css?family=Bree+Serif|Raleway" rel="stylesheet">
+    <!-- <link href="css/page.css" rel="stylesheet">
+    <link href="css/layout.css" rel="stylesheet"> -->
+
+    <!-- source: https://teamtreehouse.com/library/the-solution-24 -->
+
+  </head>
+  <body>
+    <div class="main-content">    
+      <div class="card card1">
+        <i class="material-icons">motorcycle</i>
+        <h1>Cave Tours</h1>
+        <!-- <p>Donec vehicula non mauris ac pulvinar. Ut in vulputate sapien, eget malesuada sapien. In eu imperdiet diam. Sed convallis, orci ut imperdiet.</p> -->
+        <a class="btn" href="#">Learn more</a>
+      </div>
+ 
+      <div class="card card2">
+        <i class="material-icons">videocam</i>
+        <h1>Space History</h1>
+        <!-- <p>Quisque facilisis non sapien nec venenatis. Aenean a maximus lectus. Etiam posuere quam magna, in viverra arcu aliquam dapibus.</p> -->
+        <a class="btn" href="#">Learn more</a>
+      </div>
+            
+      <div class="card card3"> 
+        <i class="material-icons">bubble_chart</i>
+        <h1>The Mill</h1>
+        <!-- <p>Pellentesque luctus leo eu mattis posuere. Morbi congue eros vel nibh aliquet lacinia. Phasellus nec gravida purus. Interdum et malesuada.</p> -->
+        <a class="btn" href="#">Learn more</a>        
+      </div> 
+      
+      <div class="card card4">
+        <i class="material-icons">terrain</i>
+        <h1>Dining</h1>
+        <!-- <p>Vivamus in massa enim. Donec vitae nibh elit. Integer vulputate tincidunt enim et vulputate. Aliquam a consectetur nisl. Praesent eu quam ex.</p> -->
+        <a class="btn" href="#">Learn more</a>        
+      </div>
+      
+      <div class="card card5">
+        <i class="material-icons">queue_music</i>
+        <h1>Pioneer Village</h1>
+        <!-- <p>Duis dignissim tortor elementum, pharetra turpis tempus, tincidunt nisl. Ut semper sapien elit, ac ornare sapien semper non. Sed feugiat felis.</p> -->
+        <a class="btn" href="#">Learn more</a>        
+      </div>
+      
+      <div class="card card6"> 
+        <i class="material-icons">blur_on</i>
+        <h1>Civil War</h1>
+        <!-- <p> Quisque facilisis non sapien nec venenatis. Aenean a maximus lectus. Etiam posuere quam magna, in viverra arcu aliquam dapibus.</p> -->
+        <a class="btn" href="#">Learn more</a>        
+      </div>                
+    </div>
+
+    <style type="text/css">
+
+       /* ===================================== 
+   Page Styles
+======================================== */
+
+* {
+	box-sizing: border-box;
+}
+body {
+  font-size: 1rem;
+  line-height: 1.5;
+	font-family: 'Raleway', sans-serif;
+  text-align: center;
+  margin: 0;
+}
+a {
+  color: #278da4;
+  text-decoration: none;
+}
+
+p {
+  margin-bottom: 1.25em;
+}
+.main-content {
+  margin: 2em auto;
+}
+.card {
+  padding: 1.5em 1em;
+  border: 1px solid #e1e1e1;
+  border-radius: 0.25em;
+  min-width: 200px;
+  min-height: 300px;
+}
+.card h1 {
+  padding-top: 3.5em;
+  font-family: 'Bree Serif', serif;
+  color: #fff; 
+  margin: 0;
+  line-height: 1.25;
+}
+.btn {
+  font-size: 0.85em;
+  color: #39abcd;
+  font-weight: bold;
+  text-transform: uppercase;
+  padding: 0.75em 1.5em;
+  border-radius: 0.35em;
+  border: 3px solid whitesmoke;
+  display: block;
+}
+.material-icons {
+  color: #42b4d6; 
+  font-size: 2.25em;
+}
+
+/* ===================================================================== 
+   Practice CSS Grid Layout
+======================================================================== */
+
+/* Target the grid container */
+.main-content {
+  width: 95%;
+  max-width: 1000px;
+  
+  /* Turn on the grid */
+  display: grid;
+  
+  /*   
+    Instruct the browser to automatically fit column tracks.
+     - Use the Grid functions and keywords that auto-generate as many columns 
+    necessary to fit the available space, without causing the grid to overflow.
+     - Each column should not get narrower than 280px and, if the available space allows it, 
+    each column should expand to take up 1 fraction of the free space.
+  */
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+
+  
+  /* Apply a 20px gutter to rows and columns */ 
+  gap:20px;  
+
+}
+
+.card1 {
+  background-image: /* linear-gradient(rgba(42, 41, 45, 0.9), rgba(42, 41, 45, 0.9)), */
+    linear-gradient(135deg, rgba(0,0,0,0.25) 0%,rgba(0,0,0,0) 75%),
+    /* linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.3)), */
+
+    url("https://media-cdn.tripadvisor.com/media/photo-w/10/e6/fd/64/photo3jpg.jpg");
+    background-size: cover; 
+    
+}
+
+.card2 {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.3)),
+    url("http://www.collectspace.com/images/news-040714a-lg.jpg");
+    background-size: cover;  
+
+
+  /* 
+  
+  http://www.collectspace.com/images/news-040714a-lg.jpg alt="Liberty Bell Space Capsule"
+  https://s3-media2.fl.yelpcdn.com/bphoto/TKAjp6X0vmML2-HZwBIeYQ/o.jpg alt="The Mill"
+  https://media-cdn.tripadvisor.com/media/photo-s/05/e4/82/d6/spring-mill-inn.jpg alt="Dining"
+  https://c1.staticflickr.com/1/23/32716314_7a37438b50_b.jpg alt="Pioneer Village"
+  https://www.crazycrow.com/site/wp-content/uploads/2018/02/Spring-Mill-State-Park-Civil-War-Weekend-01-850x567.jpg alt="Civil War"
+  https://i.pinimg.com/originals/0d/d2/c4/0dd2c42c76fd63b3d23c1a51daaece8b.png alt="Blacksmith"
+  https://cdn.onlyinyourstate.com/wp-content/uploads/2018/02/needle-700x525.jpg alt="Pioneer Quilting"
+  https://www.crazycrow.com/site/wp-content/uploads/2018/02/Spring-Mill-Civil-War-Reenactment-Weekend-14-850x567.jpg alt="Civil War Marching"
+  https://farm4.staticflickr.com/3154/2626063987_861a7d4609_z.jpg alt="Inside Mill"
+  http://www.naturallyamazing.com/americasparks/13844.jpg alt="Inside Mill Gears"
+  https://visitindiana.com/adportal/Content/FileUploads/50513/SMI20guest20room.jpg alt="Guest Room"
+  https://limestonecountry.com/wp-content/uploads/2018/07/Spring-Mill-State-Park-Camping-1024x686.jpg alt="Camping"
+
+
+  */
+}
+
+.card3 {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.3)),
+    url("https://s3-media2.fl.yelpcdn.com/bphoto/TKAjp6X0vmML2-HZwBIeYQ/o.jpg");
+    background-size: cover;  
+}
+
+.card4 {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.3)),
+    url("https://media-cdn.tripadvisor.com/media/photo-s/05/e4/82/d6/spring-mill-inn.jpg");
+    background-size: cover;  
+}
+
+.card5 {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.3)),
+    url("https://c1.staticflickr.com/1/23/32716314_7a37438b50_b.jpg");
+    background-size: cover;  
+}
+
+.card6 {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.3)),
+    url("https://www.crazycrow.com/site/wp-content/uploads/2018/02/Spring-Mill-State-Park-Civil-War-Weekend-01-850x567.jpg");
+    background-size: cover;  
+}
+
+    </style>
+  </body>
+</html>
