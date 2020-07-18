@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Blackberry</title>
+        <link href='https://fonts.googleapis.com/css?family=Sorts+Mill+Goudy' rel='stylesheet' type='text/css'>
+        <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+        <!-- <link href="css/page.css" rel="stylesheet">
+        <link href="css/grid.css" rel="stylesheet"> -->
+        <!-- Source: https://teamtreehouse.com/library/position-items-by-grid-lines -->
+  </head>
+  <body>
+        <div class="container">
+            <global-nav>Global</global-nav>
+            <header-nav>Header</header-nav>
+            <film>Film</film>
+            <promo>
+                <pro1>Pro1</pro1>
+                <pro2>Pro2</pro2>
+                <pro3>Pro3</pro3>
+            </promo>
+            <carousel>Carousel</carousel>
+            <wide>Widescreen</wide>
+            <icons>Icon Bar</icons>
+            <catalog>Catalog</catalog>
+            <footer>Footer</footer>
+
+        <style type="text/css">
+/* ===================================== 
+   Page Styles
+======================================== */
+* {
+	box-sizing: border-box;
+}
+body {
+	font-size: 1.4em;
+	font-family: 'Sorts Mill Goudy', serif;
+    font-weight: bold;
+    padding: 0;
+    margin: 0;
+}
+.container > * {
+  width: 98vw;
+  margin: 0px 10px 0px 10px;
+  color: #fff;
+  text-shadow: 0 2px 0 rgba(110,133,156,0.12);
+  border: solid 1px rgba(110,133,156,0.15);
+   /* padding: 0.85em; */
+}
+global-nav {
+  background-color: #81A543;
+}
+header-nav {
+  background-color: #3B535D;
+}
+film {
+  background-color: #2E3D45;
+}
+promo {
+  /* background-color: #4E5D5F;  */
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-gap: 10px 10px;
+  /* min-width: 500px; */
+}
+pro1 {
+    background-color: red;
+}
+pro2 {
+    background-color: tan;
+}
+pro3 {
+    background-color: blue;
+}
+
+carousel {
+  background-color: #4D445B;
+}
+wide {
+    background-color: #8BABBE;
+}
+icons {
+    background-color: #812925;
+}
+catalog {
+    background-color: #B06327;
+
+}
+
+
+footer {
+  background-color: #B6C1A7;
+}
+/* ===================================== 
+   Grid Layout
+======================================== */
+
+.container {
+  height: 100vh;
+  display: grid;
+  /* grid-template-columns: 2fr 1fr; */
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr ;
+  grid-gap: 10px;
+}
+
+@media all and (max-width: 789px) {
+
+    promo {
+  /* background-color: #4E5D5F;  */
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+  grid-gap: 10px 10px;
+  /* min-width: 500px; */
+}
+
+}
+
+
+        </style>
+
+    </body>
+</html>
