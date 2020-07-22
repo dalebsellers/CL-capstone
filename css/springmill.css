@@ -130,55 +130,170 @@ video {
     left: 0; */
   }
 
-/* ======== Marvelous Media Queries ========= */
-/* Tablet menu */
-/* @media all and (min-width: 700px) { */
+/* ======== Tri-column section ========= */
+.main-content * {
+	box-sizing: border-box;
+}
 
-    /* Make two column with here?     */
+.main-content {
+  margin: 2em auto;
+}
+.main-content .card {
+  padding: 1.5em 1em;
+  border: 1px solid #e1e1e1;
+  border-radius: 0.25em;
+  min-width: 200px;
+  min-height: 300px;
+  text-align: center;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+.main-content .card h1 {
+  padding-top: 5em;
+  font-family: 'Sorts Mill Goudy', serif;
+  text-shadow: 1px 1px 2px black, 0 0 1em black, 0 0 0.2em black;
+  color: #fff; 
+  margin: 0;
+  line-height: 1.25;
+  font-weight: normal;
+}
+.main-content .btn {
+  font-family: 'Sorts Mill Goudy', serif;
+  font-size: 0.85em;
+  color: white;
+  /* font-weight: bold; */
+  text-transform: uppercase;
+  padding: 0.75em 1.5em;
+  /* border-radius: 0.35em; */
+  border: 1px solid #ccc6ba;
+  display: block;
+  background-color: rgba(0, 0, 0, 0.45);
+  max-width: 150px;
+  margin: auto;
+}
+
+/* ===================================================================== 
+   Practice CSS Grid Layout
+======================================================================== */
+
+/* Target the grid container */
+.main-content {
+  width: 100%;
+  max-width: 98%;
+  
+  /* Turn on the grid */
+  display: grid;
+  
+  /*   
+    Instruct the browser to automatically fit column tracks.
+     - Use the Grid functions and keywords that auto-generate as many columns 
+    necessary to fit the available space, without causing the grid to overflow.
+     - Each column should not get narrower than 280px and, if the available space allows it, 
+    each column should expand to take up 1 fraction of the free space.
+  */
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+
+  
+  /* Apply a 20px gutter to rows and columns */ 
+  gap:15px;  
+
+}
+
+.main-content .card1 {
+  /* background-image: linear-gradient(rgba(42, 41, 45, 0.9), rgba(42, 41, 45, 0.9)), */
+    /* linear-gradient(135deg, rgba(0,0,0,0.25) 0%,rgba(0,0,0,0) 75%) */
+    background-image: linear-gradient(rgba(0, 0, 0, 0.01), rgba(0, 0, 0, 0.2)),
+    /* linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.3)), */
+
+    url("https://media-cdn.tripadvisor.com/media/photo-w/10/e6/fd/64/photo3jpg.jpg");
+    background-size: cover; 
     
-/* } */
+}
+
+.main-content .card2 {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.01), rgba(0, 0, 0, 0.2)),
+    url("http://www.collectspace.com/images/news-040714a-lg.jpg");
+    background-size: cover;  
+
+
+  /* 
+  
+  http://www.collectspace.com/images/news-040714a-lg.jpg alt="Liberty Bell Space Capsule"
+  https://s3-media2.fl.yelpcdn.com/bphoto/TKAjp6X0vmML2-HZwBIeYQ/o.jpg alt="The Mill"
+  https://media-cdn.tripadvisor.com/media/photo-s/05/e4/82/d6/spring-mill-inn.jpg alt="Dining"
+  https://c1.staticflickr.com/1/23/32716314_7a37438b50_b.jpg alt="Pioneer Village"
+  https://www.crazycrow.com/site/wp-content/uploads/2018/02/Spring-Mill-State-Park-Civil-War-Weekend-01-850x567.jpg alt="Civil War"
+  https://i.pinimg.com/originals/0d/d2/c4/0dd2c42c76fd63b3d23c1a51daaece8b.png alt="Blacksmith"
+  https://cdn.onlyinyourstate.com/wp-content/uploads/2018/02/needle-700x525.jpg alt="Pioneer Quilting"
+  https://www.crazycrow.com/site/wp-content/uploads/2018/02/Spring-Mill-Civil-War-Reenactment-Weekend-14-850x567.jpg alt="Civil War Marching"
+  https://farm4.staticflickr.com/3154/2626063987_861a7d4609_z.jpg alt="Inside Mill"
+  http://www.naturallyamazing.com/americasparks/13844.jpg alt="Inside Mill Gears"
+  https://visitindiana.com/adportal/Content/FileUploads/50513/SMI20guest20room.jpg alt="Guest Room"
+  https://limestonecountry.com/wp-content/uploads/2018/07/Spring-Mill-State-Park-Camping-1024x686.jpg alt="Camping"
+
+
+  */
+}
+
+.main-content .card3 {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.01), rgba(0, 0, 0, 0.2)),
+    url("https://s3-media2.fl.yelpcdn.com/bphoto/TKAjp6X0vmML2-HZwBIeYQ/o.jpg");
+    background-size: cover;  
+}
+
+
+
+/* ======== Marvelous Media Queries ========= */
+
 /* Desktop menu */
-@media all and (min-width: 720px) {
+@media all and (min-width: 950px) {
 
 /* Make three column with here?     */
 
-.menu {
-    align-items: flex-start;     
-    flex-wrap: nowrap;
-    background: none;
-}
+    .menu {
+        align-items: flex-start;     
+        flex-wrap: nowrap;
+        background: none;
+    }
 
-.logo {
-    order: 0;
-}
+    .logo {
+        order: 0;
+    }
 
-/* sets main nav items to be displayed in a row orientation */
-.item {
-    order: 1;
-    position: relative;
-    display: block; 
-    width: auto;
-}
+    /* sets main nav items to be displayed in a row orientation */
+    .item {
+        order: 1;
+        position: relative;
+        display: block; 
+        width: auto;
+    }
 
-/* .button {
-    order: -2;
-} */
+    /* .button {
+        order: -2;
+    } */
 
-/* .submenu-active .submenu {
-    display: block;
-    position: relative;
-    left: 0px;
-    top: 5px;
-    background: #f8f8f8;
-} */
+    /* .submenu-active .submenu {
+        display: block;
+        position: relative;
+        left: 0px;
+        top: 5px;
+        background: #f8f8f8;
+    } */
 
-/* sets hamburger icon to disappear */
-.toggle {
-    display: none;
-}
+    /* sets hamburger icon to disappear */
+    .toggle {
+        display: none;
+    }
 
-/* .submenu-active {
-    border-radius: 0;
-} */
+    /* .submenu-active {
+        border-radius: 0;
+    } */
+
+@media all and (max-width: 905px) {
+
+    .main-content {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-gap: 10px 10px;
 
 }

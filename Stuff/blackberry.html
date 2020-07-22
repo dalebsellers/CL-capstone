@@ -12,11 +12,22 @@
         <div class="container">
             <global-nav>Global</global-nav>
             <header-nav>Header</header-nav>
-            <film>Film</film>
+            <film>
+              <video src="https://dalebsellers.com/video/springmill-video.mp4" autoplay loop playsinline muted></video>
+            </film>
             <promo>
-                <pro1>Pro1</pro1>
-                <pro2>Pro2</pro2>
-                <pro3>Pro3</pro3>
+                <pro1 class="card">
+                  <h1>The Mill</h1>
+                  <a class="btn" href="#">Learn more</a> 
+                </pro1>
+                <pro2 class="card">
+                  <h1>Civil War</h1>
+                  <a class="btn" href="#">Learn more</a>  
+                </pro2>
+                <pro3 class="card">
+                  <h1>Spaceflight</h1>
+                  <a class="btn" href="#">Learn more</a>
+                </pro3>
             </promo>
             <carousel>Carousel</carousel>
             <wide>Widescreen</wide>
@@ -34,7 +45,7 @@
 body {
 	font-size: 1.4em;
 	font-family: 'Sorts Mill Goudy', serif;
-    font-weight: bold;
+    /* font-weight: bold; */
     padding: 0;
     margin: 0;
 }
@@ -42,8 +53,8 @@ body {
   width: 98vw;
   margin: 0px 10px 0px 10px;
   color: #fff;
-  text-shadow: 0 2px 0 rgba(110,133,156,0.12);
-  border: solid 1px rgba(110,133,156,0.15);
+  /* text-shadow: 0 2px 0 rgba(110,133,156,0.12);
+  border: solid 1px rgba(110,133,156,0.15); */
    /* padding: 0.85em; */
 }
 global-nav {
@@ -53,23 +64,75 @@ header-nav {
   background-color: #3B535D;
 }
 film {
-  background-color: #2E3D45;
+  height: 66vh;
+  /* background-color: #2E3D45; */
 }
+
+video {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+  }
+
 promo {
-  /* background-color: #4E5D5F;  */
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   grid-gap: 10px 10px;
-  /* min-width: 500px; */
+  text-align: center;
+  line-height: 1.5;
 }
+
+promo a {
+  text-decoration: none;
+}
+
+.card {
+  padding: 1.5em 1em;
+  border: 1px solid #e1e1e1;
+  border-radius: 0.25em;
+  min-width: 200px;
+  min-height: 300px;
+}
+
+.card h1 {
+  padding-top: 5em;
+  font-family: 'Sorts Mill Goudy', serif;
+  text-shadow: 1px 1px 2px black, 0 0 1em black, 0 0 0.2em black;
+  color: #fff; 
+  margin: 0;
+  line-height: 1.25;
+  font-weight: normal;
+}
+
+.btn {
+  font-family: 'Sorts Mill Goudy', serif;
+  font-size: 0.85em;
+  color: white;
+  /* font-weight: bold; */
+  text-transform: uppercase;
+  padding: 0.75em 1.5em;
+  /* border-radius: 0.35em; */
+  border: 1px solid #ccc6ba;
+  display: block;
+  background-color: rgba(0, 0, 0, 0.45);
+  max-width: 200px;
+  margin: auto;
+}
+
 pro1 {
-    background-color: red;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.01), rgba(0, 0, 0, 0.2)),
+    url("https://s3-media2.fl.yelpcdn.com/bphoto/TKAjp6X0vmML2-HZwBIeYQ/o.jpg");
+    background-size: cover;  
 }
 pro2 {
-    background-color: tan;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.01), rgba(0, 0, 0, 0.2)),
+    url("https://www.crazycrow.com/site/wp-content/uploads/2018/02/Spring-Mill-State-Park-Civil-War-Weekend-01-850x567.jpg");
+    background-size: cover; 
 }
 pro3 {
-    background-color: blue;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.01), rgba(0, 0, 0, 0.2)),
+    url("http://www.collectspace.com/images/news-040714a-lg.jpg");
+    background-size: cover; 
 }
 
 carousel {
