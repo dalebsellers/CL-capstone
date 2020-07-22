@@ -4,18 +4,37 @@
     <title>Blackberry</title>
       <link href='https://fonts.googleapis.com/css?family=Sorts+Mill+Goudy' rel='stylesheet' type='text/css'>
       <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
-      <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"> -->
-      <!-- <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script> -->
-      <!-- <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script> -->
-      <!-- <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script> -->
-      <!-- <link href="css/page.css" rel="stylesheet">
-      <link href="css/grid.css" rel="stylesheet"> -->
+      <link href='https://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
+      <!-- stylesheet below is the source for "hamburger" icon -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+    <!-- <link rel="stylesheet" href="css/springmill.css"> -->
       <!-- Source: https://teamtreehouse.com/library/position-items-by-grid-lines -->
   </head>
   <body>
         <div class="container">
-            <global-nav>Global</global-nav>
-            <header-nav>Header</header-nav>
+            <!-- <global-nav>Global</global-nav> -->
+            <header-nav>
+              <nav>
+                <ul class="menu">
+                    <li class="logo"><a href="#"><img src="../images/logo.png" alt="Spring Mill Inn"></a></li>
+                    <li class="item"><a href="#">Home</a></li>
+                    <li class="item"><a href="#">Stay</a></li>
+                    <li class="item"><a href="#">Dine</a></li>
+                    <li class="item"><a href="#">Groups</a></li>
+                    <li class="item"><a href="#">Reserve</a></li>
+                    <li class="item has-submenu">
+                        <a tabindex="0">More</a>
+                        <ul class="submenu">
+                            <li class="subitem"><a href="#">Specials</a></li>
+                            <li class="subitem"><a href="#">Photos</a></li>
+                            <li class="subitem"><a href="#">About</a></li>
+                            <li class="subitem"><a href="#">Activities</a></li>
+                        </ul>
+                    </li>
+                    <li class="toggle"><a href="#"><i class='fas fa-bars'></i></a></li>
+                </ul>
+            </nav>
+            </header-nav>
             <film>
               <video src="https://dalebsellers.com/video/springmill-video.mp4" autoplay loop playsinline muted></video>
             </film>
@@ -72,6 +91,7 @@ img {vertical-align: middle;}
 * {
 	box-sizing: border-box;
 }
+
 body {
 	font-size: 1.4em;
 	font-family: 'Sorts Mill Goudy', serif;
@@ -80,7 +100,7 @@ body {
     margin: 0;
 }
 .container > * {
-  width: 98vw;
+  /* width: 98vw; */
   margin: 0px 10px 0px 10px;
   color: #fff;
   /* text-shadow: 0 2px 0 rgba(110,133,156,0.12);
@@ -90,9 +110,126 @@ body {
 global-nav {
   background-color: #81A543;
 }
-header-nav {
+/* header-nav {
   background-color: #3B535D;
+} */
+
+/* ========= BEGIN Header nav css ======== */
+/* Sets navigation background to white with right and left side padding of 15px  */
+nav {
+    background: white;
+    padding: 0 15px;
+    font-family: 'Lato', sans-serif;
+    font-size: 15px;
+    font-weight: 900;
+    letter-spacing: 2px;
+    text-transform: uppercase;
 }
+
+/* sets link colors and removes default underline for links */
+a {
+    color: #4a4949;
+    text-decoration: none;
+}
+
+/* sets logo padding and font properties */
+.logo {
+    /* font-size: 20px; */
+    padding: 7.5px 10px 7.5px 0;
+}
+
+/* sets padding between main nav items */
+.item {
+    padding: 10px;
+}
+
+/* .item.button {
+    padding: 9px 5px;
+} */
+
+/* sets hover color for main nav items */
+.item:not(.button) a:hover,
+.item a:hover::after {
+    color: #9f9080;
+    transition: 0.35s ease;
+}
+
+/* changes main nav items from column to row orientation */
+.menu {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* sets padding to make nav items easy to select */
+.menu li a {
+    display: block;
+    /* padding: 15px 5px; */
+}
+
+/* sets main nav submenu indentation */
+.menu li.subitem a {
+    padding: 15px;
+}
+
+/* sets hamburger icon size and order - to ensure it is placed on the right hand side of page   */
+.toggle {
+    order: 1;
+    font-size: 20px;
+}
+
+/* .item.button {
+    order: 2;
+} */
+
+/* sets (hides) main nav items in default (mobile view) */
+.item {
+    order: 3;
+    width: 100%;
+    text-align: right;
+    display: none;
+}
+
+/* sets main nav items to be displayed in a column orientation after clicking on hamburger icon */
+.active .item {
+    display: block;
+}
+
+/* ================= submenu styling ================= */
+
+/* sets (hides) "More" submenu in default (mobile view)  */
+.submenu {
+    display: none;
+}
+
+/* sets (reveals) "More" submenu after clicking on "More" link in default (mobile view)  */
+.submenu-active .submenu {
+    display: block;
+ }
+
+/* sets hover properties for submenu - shifts the word "More" to the left and adds "v" graphic */
+.has-submenu > a::after {
+    font-family: "Font Awesome 5 Free";
+    font-size: 12px;
+    line-height: 16px;
+    font-weight: 900; 
+    content: "\f078";
+    color: white;
+    padding-left: 5px;
+}
+
+/* .subitem a {
+    padding: 10px 15px;
+} */
+
+/* sets background properties for submenu while active */
+.submenu-active {
+    background-color:#f8f8f8;
+    border-radius: 30px;
+}
+/* ========= END Header nav css ======== */
+
 film {
   height: 66vh;
   /* background-color: #2E3D45; */
@@ -231,9 +368,9 @@ q {
 }
 
 /* ========== END Carousel ========= */
-carousel {
-  /* background-color: #4D445B; */
-}
+/* carousel {
+  background-color: #4D445B; 
+}*/
 
 wide {
     background-color: #8BABBE;
@@ -262,9 +399,64 @@ footer {
   grid-gap: 10px;
 }
 
+/* ========= START media query for main navigation ======== */
+@media all and (min-width: 950px) {
+
+/* Make three column with here?     */
+
+    .menu {
+        align-items: flex-start;     
+        flex-wrap: nowrap;
+        background: none;
+    }
+
+    .logo {
+        order: 0;
+    }
+
+    /* sets main nav items to be displayed in a row orientation */
+    .item {
+        order: 1;
+        position: relative;
+        display: block; 
+        width: auto;
+    }
+
+    /* .button {
+        order: -2;
+    } */
+
+    /* .submenu-active .submenu {
+        display: block;
+        position: relative;
+        left: 0px;
+        top: 5px;
+        background: #f8f8f8;
+    } */
+
+    /* sets hamburger icon to disappear */
+    .toggle {
+        display: none;
+    }
+
+    /* .submenu-active {
+        border-radius: 0;
+    } */
+  }
+@media all and (max-width: 905px) {
+
+.main-content {
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+grid-gap: 10px 10px;
+}
+}
+
+/* ========== END media query for main naviagtion ========= */
+
 @media all and (max-width: 789px) {
 
-    promo {
+  promo {
   /* background-color: #4E5D5F;  */
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
@@ -278,6 +470,65 @@ footer {
 </style>
 
 <script>
+  // ========== START Main Navigation script =========
+  const toggle = document.querySelector(".toggle");
+const menu = document.querySelector(".menu");
+
+/* Toggle mobile menu */
+function toggleMenu() {
+    if (menu.classList.contains("active")) {
+        menu.classList.remove("active");
+        
+        // adds the menu (hamburger) icon
+        toggle.querySelector("a").innerHTML = "<i class='fas fa-bars'></i>";
+    } else {
+        menu.classList.add("active");
+        
+        // adds the close (x) icon
+        toggle.querySelector("a").innerHTML = "<i class='fas fa-times'></i>";
+    }
+}
+
+/* Event Listener */
+toggle.addEventListener("click", toggleMenu, false);
+
+const items = document.querySelectorAll(".item");
+
+/* 6. Add the Dropdown Functionality with JavaScript */
+/* Activate Submenu */
+function toggleItem() {
+if (this.classList.contains("submenu-active")) {
+    this.classList.remove("submenu-active");
+} else if (menu.querySelector(".submenu-active")) {
+    menu.querySelector(".submenu-active").classList.remove("submenu-active");
+    this.classList.add("submenu-active");
+} else {
+    this.classList.add("submenu-active");
+}
+}
+
+/* Event Listeners */
+for (let item of items) {
+    if (item.querySelector(".submenu")) {
+    item.addEventListener("click", toggleItem, false);
+    item.addEventListener("keypress", toggleItem, false);
+    }   
+}
+
+// 9. Let Users Close the Submenu By Clicking Anywhere on the Page
+/* Close Submenu From Anywhere */
+function closeSubmenu(e) {
+    let isClickInside = menu.contains(e.target);
+   
+    if (!isClickInside && menu.querySelector(".submenu-active")) {
+      menu.querySelector(".submenu-active").classList.remove("submenu-active");
+    }
+  }
+   
+  /* Event listener */
+  document.addEventListener("click", closeSubmenu, false);
+  // ========== END Main Navigation script =========
+  // ========== START Carousel script =========
   var slideIndex = 1;
   showSlides(slideIndex);
   
@@ -305,7 +556,10 @@ footer {
     dots[slideIndex-1].className += " active";
     setTimeout(showSlides,2000); //change every 2 seconds
   }
+  // ========== END Carousel script =========
   </script>
+  
+
 
 </body>
 </html>

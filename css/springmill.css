@@ -289,11 +289,14 @@ video {
         border-radius: 0;
     } */
 
-@media all and (max-width: 905px) {
+    @media all and (max-width: 905px) {
 
-    .main-content {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  grid-gap: 10px 10px;
+        .main-content {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        grid-gap: 10px 10px;
+        }
+    }
 
+    
 }
