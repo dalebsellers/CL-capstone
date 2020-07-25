@@ -40,16 +40,22 @@
             </film>
             <promo>
                 <pro1 class="card">
-                  <h1>The Mill</h1>
-                  <a class="btn" href="#">Learn more</a> 
+                  <div class="pad">
+                    <h1>The Mill</h1>
+                    <a class="btn" href="#">Learn more</a>
+                  </div>
                 </pro1>
                 <pro2 class="card">
-                  <h1>Civil War</h1>
-                  <a class="btn" href="#">Learn more</a>  
+                    <div class="pad">
+                      <h1>Civil War</h1>
+                      <a class="btn" href="#">Learn more</a>  
+                  </div>
                 </pro2>
                 <pro3 class="card">
-                  <h1>Spaceflight</h1>
-                  <a class="btn" href="#">Learn more</a>
+                  <div class="pad">
+                    <h1>Spaceflight</h1>
+                    <a class="btn" href="#">Learn more</a>
+                </div>
                 </pro3>
             </promo>
             <carousel>
@@ -75,7 +81,12 @@
                 
                 </div>
             </carousel>
-            <wide>Widescreen</wide>
+            <wide class="card">
+              <div class="pad">
+                <h1>Lawrence County</h1>
+                <a class="btn" href="#">Learn more</a>
+              </div>
+            </wide>
             <icons>Icon Bar</icons>
             <catalog>Catalog</catalog>
             <footer>Footer</footer>
@@ -139,7 +150,7 @@ a {
 }
 
 /* sets padding between main nav items */
-.item {
+.item a {
     padding: 10px;
 }
 
@@ -245,7 +256,7 @@ promo {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   grid-gap: 10px 10px;
-  text-align: center;
+  /* text-align: center; */
   line-height: 1.5;
 }
 
@@ -253,22 +264,35 @@ promo a {
   text-decoration: none;
 }
 
-.card {
+wide {
+  height: 45vh;
+  display: block;
+}
+
+.card,
+wide {
   padding: 1.5em 1em;
   border: 1px solid #e1e1e1;
   border-radius: 0.25em;
   min-width: 200px;
-  min-height: 300px;
+  /* min-height: 500px; */
+  min-height: 45vh;
 }
 
-.card h1 {
-  padding-top: 5em;
+.pad {
+  padding: 180px 40px 10px 40px;
+}
+
+.card h1,
+wide h1 {
+  /* padding-top: 5em; */
   font-family: 'Sorts Mill Goudy', serif;
   text-shadow: 1px 1px 2px black, 0 0 1em black, 0 0 0.2em black;
   color: #fff; 
-  margin: 0;
+  margin-bottom: 0px;
   line-height: 1.25;
   font-weight: normal;
+  text-align: center;
 }
 
 .btn {
@@ -277,11 +301,11 @@ promo a {
   color: white;
   /* font-weight: bold; */
   text-transform: uppercase;
-  padding: 0.75em 1.5em;
-  /* border-radius: 0.35em; */
+  padding: .75em 1.5em;
+  border-radius: 0.35em;
   border: 1px solid #998D6E;
   display: block;
-  background-color: rgba(0, 0, 0, 0.45);
+  background-color: rgba(0, 0, 0, 0.55);
   max-width: 200px;
   margin: auto;
 }
@@ -373,7 +397,11 @@ q {
 }*/
 
 wide {
-    background-color: #8BABBE;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.01), rgba(0, 0, 0, 0.2)),
+    url("https://limestonecountry.com/wp-content/uploads/2020/03/Spring_Blossoms_2000x800.jpg");
+    background-size: cover; 
+    display: flex;
+    flex-direction: column;
 }
 icons {
     background-color: #812925;
