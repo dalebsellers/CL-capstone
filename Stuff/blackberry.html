@@ -81,13 +81,23 @@
                 
                 </div>
             </carousel>
-            <wide class="card">
-              <div class="pad">
-                <h1>Lawrence County</h1>
-                <a class="btn" href="#">Learn more</a>
-              </div>
-            </wide>
-            <icons>Icon Bar</icons>
+            <lawco class="lcard">
+              <!-- <pro4> -->
+                <div class="lpad">
+                  <h3>Home of Spring Mill Inn</h3>
+                  <h1>Lawrence County</h1>
+                  <a class="lbtn" href="#">Learn more</a>
+                </div>
+              <!-- </pro4> -->
+            </lawco>
+            <icons>
+              <ul class="share-us">
+                <li><a href="#" target="_blank"><img alt="Envelope" src="/images/email.svg"><span>Manage your <br>preferences</span></a></li>
+                <li><a href="#" target="_blank"><img alt="Envelope" src="/images/twitter.svg"><span>Follow us on <br>Twitter</span></a></li>
+                <li><a href="#" target="_blank"><img alt="Envelope" src="/images/facebook.svg"><span>Find us on <br>Facebook</span></a></li>
+                <li><a href="#" target="_blank"><img alt="Envelope" src="/images/instagram.svg"><span>See us on <br>Instagram</span></a></li>
+              </ul>
+            </icons>
             <catalog>Catalog</catalog>
             <footer>Footer</footer>
 
@@ -110,6 +120,7 @@ body {
     padding: 0;
     margin: 0;
 }
+
 .container > * {
   /* width: 98vw; */
   margin: 0px 10px 0px 10px;
@@ -264,27 +275,69 @@ promo a {
   text-decoration: none;
 }
 
-wide {
-  height: 45vh;
-  display: block;
-}
-
-.card,
-wide {
+.card {
   padding: 1.5em 1em;
   border: 1px solid #e1e1e1;
   border-radius: 0.25em;
   min-width: 200px;
-  /* min-height: 500px; */
-  min-height: 45vh;
+}
+
+.lcard {
+  border-radius: 0.25em;
+  min-height: 400px;
 }
 
 .pad {
   padding: 180px 40px 10px 40px;
 }
 
-.card h1,
-wide h1 {
+.lpad {
+  padding: 180px 40px 10px 40px;
+}
+
+.share-us {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    list-style: none;
+    box-sizing: border-box;
+}
+
+.share-us ul {
+  margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    padding-inline-start: 40px;
+}
+
+.share-us img {
+  display: block;
+    width: 60px;
+    margin: 0 20px 0 0;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+img, a img {
+    border: 0;
+}
+
+.share-us img, .share-us span {
+    display: block;
+}
+
+.share-us li:nth-of-type(1) img {
+    width: 70px;
+}
+
+.card h1 {
   /* padding-top: 5em; */
   font-family: 'Sorts Mill Goudy', serif;
   text-shadow: 1px 1px 2px black, 0 0 1em black, 0 0 0.2em black;
@@ -293,6 +346,18 @@ wide h1 {
   line-height: 1.25;
   font-weight: normal;
   text-align: center;
+}
+
+.card h3 {
+    color: #8b6c4d;
+    font-family: 'Lato';
+    text-shadow: 1px 1px 2px white, 0 0 1em white, 0 0 0.2em white;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 12px;
+    line-height: 20px;
+    margin: 0 0 6px 0;
 }
 
 .btn {
@@ -396,16 +461,14 @@ q {
   background-color: #4D445B; 
 }*/
 
-wide {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.01), rgba(0, 0, 0, 0.2)),
+lawco {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.01), rgba(0, 0, 0, 9)),
     url("https://limestonecountry.com/wp-content/uploads/2020/03/Spring_Blossoms_2000x800.jpg");
     background-size: cover; 
     display: flex;
     flex-direction: column;
 }
-icons {
-    background-color: #812925;
-}
+
 catalog {
     background-color: #B06327;
 
