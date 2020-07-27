@@ -22,7 +22,7 @@ toggle.addEventListener("click", toggleMenu, false);
 
 const items = document.querySelectorAll(".item");
 
-/* 6. Add the Dropdown Functionality with JavaScript */
+/* Add the Dropdown Functionality */
 /* Activate Submenu */
 function toggleItem() {
 if (this.classList.contains("submenu-active")) {
@@ -43,7 +43,6 @@ for (let item of items) {
     }   
 }
 
-// 9. Let Users Close the Submenu By Clicking Anywhere on the Page
 /* Close Submenu From Anywhere */
 function closeSubmenu(e) {
     let isClickInside = menu.contains(e.target);
@@ -56,6 +55,7 @@ function closeSubmenu(e) {
   /* Event listener */
   document.addEventListener("click", closeSubmenu, false);
   // ========== END Main Navigation script =========
+  
   // ========== START Carousel script =========
   var slideIndex = 1;
   showSlides(slideIndex);
