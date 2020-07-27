@@ -1,66 +1,108 @@
 <!DOCTYPE html>
 <html>
-<head>
-    
-    <title>Spring Mill Inn</title>
-    <link href='https://fonts.googleapis.com/css?family=Sorts+Mill+Goudy' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" href="css/normalize.css">
-    <!-- stylesheet below is the source for "hamburger" icon -->
+  <head>
+    <title>Blackberry</title>
+      <link href='https://fonts.googleapis.com/css?family=Sorts+Mill+Goudy' rel='stylesheet' type='text/css'>
+      <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+      <link href='https://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
+      <!-- stylesheet below is the source for "hamburger" icon -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
     <link rel="stylesheet" href="css/springmill.css">
-    <!-- <link rel="stylesheet" href="css/sm-grid.css"> -->
-</head>
-<body>
+      <!-- Source: https://teamtreehouse.com/library/position-items-by-grid-lines -->
+  </head>
+  <body>
+        <div class="container">
+            <!-- <global-nav>Global</global-nav> -->
+            <header-nav>
+              <nav>
+                <ul class="menu">
+                    <li class="logo"><a href="#"><img src="../images/logo.png" alt="Spring Mill Inn"></a></li>
+                    <li class="item"><a href="#">Home</a></li>
+                    <li class="item"><a href="#">Stay</a></li>
+                    <li class="item"><a href="#">Dine</a></li>
+                    <li class="item"><a href="#">Groups</a></li>
+                    <li class="item"><a href="#">Reserve</a></li>
+                    <li class="item has-submenu">
+                        <a tabindex="0">More</a>
+                        <ul class="submenu">
+                            <li class="subitem"><a href="#">Specials</a></li>
+                            <li class="subitem"><a href="#">Photos</a></li>
+                            <li class="subitem"><a href="#">About</a></li>
+                            <li class="subitem"><a href="#">Activities</a></li>
+                        </ul>
+                    </li>
+                    <li class="toggle"><a href="#"><i class='fas fa-bars'></i></a></li>
+                </ul>
+            </nav>
+            </header-nav>
+            <film>
+              <video src="https://dalebsellers.com/video/springmill-video.mp4" autoplay loop playsinline muted></video>
+            </film>
+            <promo>
+                <pro1 class="card">
+                  <div class="pad">
+                    <h1>The Mill</h1>
+                    <a class="btn" href="#">Learn more</a>
+                  </div>
+                </pro1>
+                <pro2 class="card">
+                    <div class="pad">
+                      <h1>Civil War</h1>
+                      <a class="btn" href="#">Learn more</a>  
+                  </div>
+                </pro2>
+                <pro3 class="card">
+                  <div class="pad">
+                    <h1>Spaceflight</h1>
+                    <a class="btn" href="#">Learn more</a>
+                </div>
+                </pro3>
+            </promo>
+            <carousel>
+              <div class="slideshow-container">
 
-<!--plug in the HTML-->
-
-<nav>
-    <ul class="menu">
-        <li class="logo"><a href="#"><img src="images/logo.png" alt="Spring Mill Inn"></a></li>
-        <li class="item"><a href="#">Home</a></li>
-        <li class="item"><a href="#">Stay</a></li>
-        <li class="item"><a href="#">Dine</a></li>
-        <li class="item"><a href="#">Groups</a></li>
-        <li class="item"><a href="#">Reserve</a></li>
-        <li class="item has-submenu">
-            <a tabindex="0">More</a>
-            <ul class="submenu">
-                <li class="subitem"><a href="#">Specials</a></li>
-                <li class="subitem"><a href="#">Photos</a></li>
-                <li class="subitem"><a href="#">About</a></li>
-                <li class="subitem"><a href="#">Activities</a></li>
-            </ul>
-        </li>
-        <li class="toggle"><a href="#"><i class='fas fa-bars'></i></a></li>
-    </ul>
-</nav>
-
-<div>
-    <!-- <video src="https://dalebsellers.com/video/springmill-video.mp4" autoplay loop playsinline muted></video> -->
-    <video src="https://dalebsellers.com/video/springmill-video.mp4" loop playsinline muted></video>
-</div>
-
-<!-- begin next section -->
-
-<div class="main-content">    
-    <div class="card card1">
-      <h1>Cave Boating </h1>
-      <a class="btn" href="#">Learn more</a>
-    </div>
-
-    <div class="card card2">
-      <h1>Space History</h1>
-      <a class="btn" href="#">Learn more</a>
-    </div>
-          
-    <div class="card card3"> 
-      <h1>The Mill</h1>
-      <a class="btn" href="#">Learn more</a>        
-    </div> 
-</div>
+                <div class="mySlides">
+                  <q>We were very pleased with the staff and all there is to do at Spring Mill Park! Delightful location, lots of trails for walking, excellent staff, nice room and a great restaurant. If you are looking for a family friendly break from the daily grind - this is a good choice.</q>
+                  <p class="author"><b>Benjamin</b> - Bowling Green, Ohio</p>
+                </div>
+                
+                <div class="mySlides">
+                  <q>I really enjoyed this park. The inn is very nice, great service from the front desk. The hiking was great. The trails are fun and most are easy enough for a part time hiker like me. There’s an indoor pool at the inn along with a few arcade type games. Really nice!</q>
+                  <p class="author"><b>Jeanne</b> - Page, Arizona</p>
+                </div>
+                
+                <div class="mySlides">
+                  <q>Stayed here for a couple days of relaxation. Got a two queen bed room with fridge and microwave. Nice spacious room. Clean and comfortable. The dining room had AWESOME fried chicken. The staff was very friendly. They keep the building up very nicely!</q>
+                  <p class="author"><b>Doug</b> - Salem, Indiana</p>
+                </div>
+                
+                <a class="prev" onclick="plusSlides(-1)">❮</a>
+                <a class="next" onclick="plusSlides(1)">❯</a>
+                
+                </div>
+            </carousel>
+            <lawco class="lcard">
+              <!-- <pro4> -->
+                <div class="lpad">
+                  <h3>Home of Spring Mill Inn</h3>
+                  <h1>Lawrence County</h1>
+                  <a class="lbtn" href="#">Learn more</a>
+                </div>
+              <!-- </pro4> -->
+            </lawco>
+            <icons>
+              <ul class="share-us">
+                <li><a href="#" target="_blank"><img alt="Envelope" src="/images/email.svg"><span>Manage your <br>preferences</span></a></li>
+                <li><a href="#" target="_blank"><img alt="Envelope" src="/images/twitter.svg"><span>Follow us on <br>Twitter</span></a></li>
+                <li><a href="#" target="_blank"><img alt="Envelope" src="/images/facebook.svg"><span>Find us on <br>Facebook</span></a></li>
+                <li><a href="#" target="_blank"><img alt="Envelope" src="/images/instagram.svg"><span>See us on <br>Instagram</span></a></li>
+              </ul>
+            </icons>
+            <catalog>Catalog</catalog>
+            <footer>Footer</footer>
 
 <!-- sets the toggle functionality with JavaScript -->
 <script src="js/script.js"></script>
 
-</body>
+    </body>
 </html>
