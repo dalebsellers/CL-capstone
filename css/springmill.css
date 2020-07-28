@@ -4,151 +4,188 @@ img {vertical-align: middle;}
 /* ===================================== 
    Page Styles
 ======================================== */
+/* 2. Add Some Basic Styling */
+/* Basic styling */
 * {
-	box-sizing: border-box;
-}
-
-body {
-	font-size: 1.4em;
-	font-family: 'Sorts Mill Goudy', serif;
-    /* font-weight: bold; */
+    box-sizing: border-box;
     padding: 0;
     margin: 0;
-}
+  }
+  body {
+      font-family: sans-serif;
+      font-size: 13px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      font-weight: 800;
+  }
+  nav {
+      background: white;
+      padding: 0 15px;
+  }
+  a {
+      color: #4a4949;
+      text-decoration: none;
 
-.container > * {
-  /* width: 98vw; */
-  margin: 0px 10px 0px 10px;
-  color: #fff;
-  /* text-shadow: 0 2px 0 rgba(110,133,156,0.12);
-  border: solid 1px rgba(110,133,156,0.15); */
-   /* padding: 0.85em; */
-}
-global-nav {
-  background-color: #81A543;
-}
-/* header-nav {
-  background-color: #3B535D;
-} */
+/* ========= BEGIN Header Navigation css ======== */
 
-/* ========= BEGIN Header nav css ======== */
-/* Sets navigation background to white with right and left side padding of 15px  */
-nav {
-    background: white;
-    padding: 0 15px;
-    font-family: 'Lato', sans-serif;
-    font-size: 15px;
-    font-weight: 900;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-}
-
-/* sets link colors and removes default underline for links */
-a {
-    color: #4a4949;
-    text-decoration: none;
-}
-
-/* sets logo padding and font properties */
-.logo {
-    /* font-size: 20px; */
+  }
+  .menu,
+  .submenu {
+    list-style-type: none;
+  }
+  .logo {
+    font-size: 20px;
     padding: 7.5px 10px 7.5px 0;
-}
-
-/* sets padding between main nav items */
-.item a {
+  }
+  .item {
     padding: 10px;
-}
-
-/* .item.button {
+  }
+  .item.button {
     padding: 9px 5px;
-} */
-
-/* sets hover color for main nav items */
-.item:not(.button) a:hover,
-.item a:hover::after {
-    color: #9f9080;
-    transition: 0.35s ease;
-}
-
-/* changes main nav items from column to row orientation */
-.menu {
+  }
+  .item:not(.button) a:hover,
+  .item a:hover::after {
+      color: #9f9080;
+  }
+  /* Header Navigation Mobile menu */
+  .menu {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
-}
-
-/* sets padding to make nav items easy to select */
-.menu li a {
+  }
+  .menu li a {
     display: block;
-    /* padding: 15px 5px; */
-}
-
-/* sets main nav submenu indentation */
-.menu li.subitem a {
+    padding: 15px 5px;
+  }
+  .menu li.subitem a {
     padding: 15px;
-}
-
-/* sets hamburger icon size and order - to ensure it is placed on the right hand side of page   */
-.toggle {
+  }
+  .toggle {
     order: 1;
     font-size: 20px;
-}
-
-/* .item.button {
+  }
+  .item.button {
     order: 2;
-} */
-
-/* sets (hides) main nav items in default (mobile view) */
-.item {
+  }
+  .item {
     order: 3;
     width: 100%;
     text-align: right;
     display: none;
-}
-
-/* sets main nav items to be displayed in a column orientation after clicking on hamburger icon */
-.active .item {
+  }
+  .active .item {
     display: block;
-}
-
-/* ================= submenu styling ================= */
-
-/* sets (hides) "More" submenu in default (mobile view)  */
-.submenu {
+  }
+  .button.secondary {
+    /* divider between buttons and menu links */
+    border-bottom: 1px #444 solid;
+  }
+  /* Header Navigation Submenu up from mobile screens */
+  .submenu {
     display: none;
-}
-
-/* sets (reveals) "More" submenu after clicking on "More" link in default (mobile view)  */
-.submenu-active .submenu {
+  }
+  .submenu-active .submenu {
     display: block;
- }
-
-/* sets hover properties for submenu - shifts the word "More" to the left and adds "v" graphic */
-.has-submenu > a::after {
+  }
+  .has-submenu i {
+    font-size: 12px;
+  }
+  .has-submenu > a::after {
     font-family: "Font Awesome 5 Free";
     font-size: 12px;
     line-height: 16px;
-    font-weight: 900; 
+    font-weight: 900;
     content: "\f078";
     color: white;
     padding-left: 5px;
-}
-
-/* .subitem a {
+  }
+  .subitem a {
     padding: 10px 15px;
-} */
-
-/* sets background properties for submenu while active */
-.submenu-active {
-    background-color:#f8f8f8;
-    border-radius: 30px;
-}
-/* ========= END Header nav css ======== */
+  }
+  .submenu-active {
+      background-color:#f8f8f8;
+      border-radius: 30px;
+  }
+  
+  /* Header Navigation Tablet menu */
+  @media all and (min-width: 700px) {
+    .menu {
+      justify-content: center;
+    }
+    .logo {
+      flex: 1;
+    }
+    .item.button {
+      width: auto;
+      order: 1;
+      display: block;
+    }
+    .toggle {
+      flex: 1;
+      text-align: right;
+      order: 2;
+    }
+    /* Header Navigation Button up from tablet screen */
+    .menu li.button a {
+      padding: 10px 15px;
+      margin: 5px 0;
+    }
+    .button a {
+      background: #0080ff;
+      border: 1px royalblue solid;
+    }
+    .button.secondary {
+      border: 0;
+    }
+    .button.secondary a {
+      background: transparent;
+      border: 1px #0080ff solid;
+    }
+    .button a:hover {
+      text-decoration: none;
+    }
+    .button:not(.secondary) a:hover {
+  text-decoration: none;
+    }
+  }
+  /* Header Navigation Desktop menu */
+  @media all and (min-width: 960px) {
+    .menu {
+      align-items: flex-start;
+      flex-wrap: nowrap;
+      background: none;
+    }
+    .logo {
+      order: 0;
+    }
+    .item {
+      order: 1;
+      position: relative;
+      display: block;
+      width: auto;
+    }
+    .button {
+      order: 2;
+    }
+    .submenu-active .submenu {
+      display: block;
+      position: relative;
+      left: 0;
+      top: 5px;
+      background: #f8f8f8;
+    }
+    .toggle {
+      display: none;
+    }
+    .submenu-active {
+      border-radius: 0;
+    }
+  }
+/* ========= END Header Navigation css ======== */
 
 film {
-  height: 66vh;
+  height: 60vh;
   /* background-color: #2E3D45; */
 }
 
@@ -176,16 +213,7 @@ promo a {
   min-width: 200px;
 }
 
-.lcard {
-  border-radius: 0.25em;
-  min-height: 400px;
-}
-
 .pad {
-  padding: 180px 40px 10px 40px;
-}
-
-.lpad {
   padding: 180px 40px 10px 40px;
 }
 
@@ -232,7 +260,6 @@ img, a img {
 }
 
 .card h1 {
-  /* padding-top: 5em; */
   font-family: 'Sorts Mill Goudy', serif;
   text-shadow: 1px 1px 2px black, 0 0 1em black, 0 0 0.2em black;
   color: #fff; 
@@ -240,6 +267,7 @@ img, a img {
   line-height: 1.25;
   font-weight: normal;
   text-align: center;
+  text-transform: none;
 }
 
 .card h3 {
@@ -260,6 +288,7 @@ img, a img {
   color: white;
   /* font-weight: bold; */
   text-transform: uppercase;
+  text-align: center;
   padding: .75em 1.5em;
   border-radius: 0.35em;
   border: 1px solid #998D6E;
@@ -276,17 +305,17 @@ img, a img {
 
 pro1 {
     background-image: linear-gradient(rgba(0, 0, 0, 0.01), rgba(0, 0, 0, 0.2)),
-    url("https://s3-media2.fl.yelpcdn.com/bphoto/TKAjp6X0vmML2-HZwBIeYQ/o.jpg");
+    url("../images/mill01.jpg");
     background-size: cover;  
 }
 pro2 {
     background-image: linear-gradient(rgba(0, 0, 0, 0.01), rgba(0, 0, 0, 0.2)),
-    url("https://www.crazycrow.com/site/wp-content/uploads/2018/02/Spring-Mill-State-Park-Civil-War-Weekend-01-850x567.jpg");
+    url("../images/Spring-Mill-State-Park-Civil-War-Weekend-01-850x567.jpg");
     background-size: cover; 
 }
 pro3 {
     background-image: linear-gradient(rgba(0, 0, 0, 0.01), rgba(0, 0, 0, 0.2)),
-    url("http://www.collectspace.com/images/news-040714a-lg.jpg");
+    url("../images/news-040714a-lg.jpg");
     background-size: cover; 
 }
 /* ========== START Carousel ========== */
@@ -306,7 +335,7 @@ pro3 {
   display: none;
   max-width: 70%;
   text-align: center;
-  color: black;
+  color: #8a8a8a;
   margin: auto;
 }
 
@@ -343,11 +372,16 @@ pro3 {
 /* Add an italic font style to all quotes */
 q {
   font-size: 18px;
+  text-transform: none;
+  font-weight: 100;
+  color: #8a8a8a;
 }
 
 /* Add color to the author */
 .author {
   color: #998D6E;
+  text-transform: none;
+  font-size: 18px;
 }
 
 /* ========== END Carousel ========= */
@@ -357,7 +391,7 @@ q {
 
 lawco {
   background-image: linear-gradient(rgba(0, 0, 0, 0.01), rgba(0, 0, 0, 9)),
-    url("https://limestonecountry.com/wp-content/uploads/2020/03/Spring_Blossoms_2000x800.jpg");
+    url("../images/Spring_Blossoms_2000x800.jpg");
     background-size: cover; 
     display: flex;
     flex-direction: column;
@@ -385,68 +419,94 @@ footer {
 }
 
 /* ========= START media query for main navigation ======== */
-@media all and (min-width: 950px) {
+/* 7. Create the Tablet Menu */
+/* Tablet menu */
+@media all and (min-width: 700px) {
+    .menu {
+        justify-content: center;
+    }
+    .logo {
+        flex: 1;
+    }
+    .item.button {
+        width: auto;
+        order: 1;
+        display: block;
+    }
+    .toggle {
+        flex: 1;
+        text-align: right;
+        order: 2;
+    }
+    /* Button up from tablet screen */
+    .menu li.button a {
+        padding: 10px 15px;
+        margin: 5px 0;
+    }
+    .button a {
+        background: #0080ff;
+        border: 1px royalblue solid;
+    }
+    .button.secondary {
+        border: 0;
+    }
+    .button.secondary a {
+        background: transparent;
+        border: 1px #0080ff solid;  
+    }
+    .button a:hover {
+        text-decoration: none;
+    }
+    .button:not(.secondary) a:hover {
+        background: royalblue;
+        border-color: darkblue;
+    }
+}
 
-/* Make three column with here?     */
-
+/* 8. Create the Desktop Menu */
+/* Desktop menu */
+@media all and (min-width: 960px) {
     .menu {
         align-items: flex-start;     
         flex-wrap: nowrap;
         background: none;
     }
-
     .logo {
         order: 0;
     }
-
-    /* sets main nav items to be displayed in a row orientation */
     .item {
         order: 1;
         position: relative;
         display: block; 
         width: auto;
     }
-
-    /* .button {
-        order: -2;
-    } */
-
-    /* .submenu-active .submenu {
+    .button {
+        order: 2;
+    }
+    .submenu-active .submenu {
         display: block;
         position: relative;
         left: 0px;
         top: 5px;
         background: #f8f8f8;
-    } */
-
-    /* sets hamburger icon to disappear */
+    }
     .toggle {
         display: none;
     }
-
-    /* .submenu-active {
+    .submenu-active {
         border-radius: 0;
-    } */
-  }
-@media all and (max-width: 905px) {
-
-.main-content {
-display: grid;
-grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-grid-gap: 10px 10px;
+    }
 }
-}
-
 /* ========== END media query for main naviagtion ========= */
 
-@media all and (max-width: 789px) {
+/* @media all and (max-width: 1015px) {
 
   promo {
-  /* background-color: #4E5D5F;  */
+  /* background-color: #4E5D5F; 
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
   grid-gap: 10px 10px;
-  /* min-width: 500px; */
+  min-width: 500px; 
 }
 
-}
+} */
