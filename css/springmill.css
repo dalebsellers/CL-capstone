@@ -330,6 +330,26 @@ pro3 {
         /* line-height: 1.5; */
       }
 }
+
+@media (max-width: 500px) {
+    promo {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(360px, 1fr)); /*minmax xxpx controls when promos change*/
+        grid-gap: 10px 10px; /* controls space between grid items */
+        /* line-height: 1.5; */
+    }
+
+    .logo img {
+        max-width: 75%;
+        height: auto;
+    }
+
+    .logo {
+        font-size: 10px;
+        padding: 3px 5px 3px 0;
+      }
+
+}
 /* ========== END Promo Media Query ========== */
 
 /* ========== START Carousel ========== */
