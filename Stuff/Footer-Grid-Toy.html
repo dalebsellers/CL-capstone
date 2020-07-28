@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>CSS Grid Toy2</title>
+	  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">    
+    <link href="https://fonts.googleapis.com/css?family=Bree+Serif|Raleway" rel="stylesheet">
+    <link href='https://fonts.googleapis.com/css?family=Sorts+Mill+Goudy' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+    <!-- <link href="css/page.css" rel="stylesheet">
+    <link href="css/layout.css" rel="stylesheet"> -->
+
+    <!-- source: https://teamtreehouse.com/library/the-solution-24 -->
+
+  </head>
+  <body>
+    <div class="main-content">    
+      <div class="card card1">
+      </div>
+ 
+      <div class="card card2">
+        <a class="btn" href="#">Indiana State Park Inns</a>
+      </div>
+            
+      <div class="card card3"> 
+        <a class="btn" href="#">Indiana State Parks</a>        
+      </div> 
+      
+      <div class="card card4">
+        <a class="btn" href="#">Indiana DNR</a>        
+      </div>
+      
+      <div class="card card5">
+        <a class="btn" href="#">Contact Us</a>        
+      </div>
+      
+      <div class="card card6"> 
+
+      </div>
+    </div>
+
+    <style type="text/css">
+
+       /* ===================================== 
+   Page Styles
+======================================== */
+
+* {
+	box-sizing: border-box;
+}
+body {
+  font-size: 1rem;
+  line-height: 1.5;
+  font-family: 'Raleway', sans-serif;
+  text-align: center;
+  margin: 0;
+}
+.main-content a {
+  color: #278da4;
+  text-decoration: none;
+}
+
+.main-content p {
+  margin-bottom: 1.25em;
+}
+.main-content {
+  margin: 2em auto;
+}
+.main-content .card {
+  padding: 0rem 1rem;
+  
+}
+.main-content .card h1 {
+  padding-top: 5rem;
+  font-family: 'Open Sans', sans-serif;
+  text-shadow: 1px 1px 2px black, 0 0 1em black, 0 0 0.2em black;
+  color: #fff; 
+  margin: 0;
+  line-height: 1.25;
+  font-weight: normal;
+}
+.main-content .btn {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 0.85rem;
+  color:white;
+  text-transform: uppercase;
+  max-width: 150px;
+  margin: auto;
+}
+
+/* ===================================================================== 
+   Practice CSS Grid Layout
+======================================================================== */
+
+/* Target the grid container */
+.main-content {
+  width: 95%;
+  max-width: 90%;
+  background-color: darkslategray;
+  
+  /* Turn on the grid */
+  display: grid;
+  
+  /*   
+    Instruct the browser to automatically fit column tracks.
+     - Use the Grid functions and keywords that auto-generate as many columns 
+    necessary to fit the available space, without causing the grid to overflow.
+     - Each column should not get narrower than 280px and, if the available space allows it, 
+    each column should expand to take up 1 fraction of the free space.
+  */
+  grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+
+  
+  /* Apply a 20px gutter to rows and columns */ 
+  gap:15px;  
+
+}
+
+    </style>
+  </body>
+</html>

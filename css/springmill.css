@@ -53,6 +53,8 @@ img {vertical-align: middle;}
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
+    font-family: 'Lato', sans-serif;
+    font-weight: bold;
   }
   .menu li a {
     display: block;
@@ -197,7 +199,7 @@ video {
 
 promo {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /*minmax xxpx controls when promos change*/
   grid-gap: 10px 10px; /* controls space between grid items */
   /* line-height: 1.5; */
 }
@@ -318,6 +320,18 @@ pro3 {
     url("../images/news-040714a-lg.jpg");
     background-size: cover; 
 }
+
+/* ========== START Promo Media Query ========== */
+@media (max-width: 959px) {
+    promo {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(467px, 1fr)); /*minmax xxpx controls when promos change*/
+        grid-gap: 10px 10px; /* controls space between grid items */
+        /* line-height: 1.5; */
+      }
+}
+/* ========== START Promo Media Query ========== */
+
 /* ========== START Carousel ========== */
 
 /* Slideshow container */
@@ -402,9 +416,8 @@ catalog {
 
 }
 
-
-footer {
-  background-color: #B6C1A7;
+footer-nav a {
+    padding: 100px;
 }
 /* ===================================== 
    Grid Layout
@@ -498,15 +511,3 @@ footer {
     }
 }
 /* ========== END media query for main naviagtion ========= */
-
-/* @media all and (max-width: 1015px) {
-
-  promo {
-  /* background-color: #4E5D5F; 
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
-  grid-gap: 10px 10px;
-  min-width: 500px; 
-}
-
-} */
